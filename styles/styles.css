@@ -1,7 +1,17 @@
+@font-face {
+    font-family: "Prata";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Prata"),
+        url("/fonts/Prata-Regular.woff2") format("woff2"),
+        url("/fonts/Prata-Regular.woff") format("woff");
+}
+
 body {
-    background-color: #222;
+    background-color: #282829;
     color: #fff;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -13,16 +23,27 @@ button {
     transition: background-color 0.2s ease;
 }
 
+
+.element {
+    padding-block: 0.5rem;
+}
+
+.breaker {
+    margin-top: 4rem;
+}
+
 /* HEADER */
 
 .page-header {
     padding-inline: 5%;
-    padding-top: 2vh;
+    padding-block: 2vh;
     position: sticky;
     top: 0;
     background-color: #222;
     color: #fff;
     align-items: center;
+    z-index: 999;
+    border-bottom: 0.1rem groove #111;
 }
 
 .logo-name {  
@@ -32,24 +53,123 @@ button {
 }
 
 .page-header-nav {
-    padding-top: 0.5rem;
     font-size: clamp(1rem, 4vw, 1.5rem);
     white-space: nowrap;
-    display: flex;
-    margin-left: 0;
-    gap: clamp(1rem, 4vw, 6rem);
-    
+}
+
+.page-header-nav button {
+    font-style: italic;
 }
 
 /* MAIN */
 
 .page-main {
-
+    background-color: #222;
+    position: relative;
+    padding-inline: 5%;
+    padding-top: 2vh;
+    height: 95vh;
 }
+
+.main-info {
+    padding-top: 2rem;
+}
+
+.main-h1 {
+    font-size: 2rem;
+    transition: font-size 0.2s ease;
+    max-width: 40rem;
+}
+
+.main-h2 {
+    font-size: 1rem;
+    transition: font-size 0.2s ease;
+    max-width: 30rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature p {
+    margin-left: 1rem;
+    transition: font-size 0.2s ease;
+}
+
+.feature span {
+    font-size: 1.5em;
+    font-family: "Prata", Arial, Helvetica, sans-serif;
+}
+
+.main-btn {
+    background-color: #fff;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+.main-img {
+    width: 10rem;
+    position: absolute;
+    border-radius: 2rem;
+    transition: right 0.2s ease;
+}
+
+/* FEATURES */
+
+.page-features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-img {
+    display: none;
+    width: 20%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+}
+
+.details {
+    padding-inline: 5%;
+}
+
+.details ul li {
+    word-break: break-word;
+    text-align: justify;
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    margin-block: 2rem;
+    max-width: 40rem;
+    line-height: 1.5rem;
+}
+
+.details ul li img {
+    width: 2rem;
+}
+
+.details-btn {
+    width: 100%;
+    background-color: #fff;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
 
 @media (pointer: coarse) {
     button:active {
         background-color: #444;
+    }
+
+    .main-btn:active, .details-btn:active {
+        background-color: #bbb;
     }
 }
 
@@ -58,10 +178,34 @@ button {
       background-color: #333;
       cursor: pointer;
     }
-  }
+    .main-btn:hover, .details-btn:hover {
+        background-color: #bbb;
+    }
+}
 
 
 @media (min-width: 480px) {
+    /* MAIN */
+
+    .main-h1 {
+        font-size: 4rem;
+    }
+
+    .main-h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature p {
+        font-size: 1.5rem;
+    }
+
+    .main-btn {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
     /* HEADER */
 
     .page-header {
@@ -71,10 +215,60 @@ button {
     .page-header-nav {
         margin-left: auto;
     }
+
+    /* MAIN */
+
+    .main-img {
+        bottom: 10%;
+        right: 5%;
+        width: 15rem;
+    }
+
+    /* DETAILS */
+
+    .back-img {
+        display:block;
+    }
+}
+
+@media (min-width: 920px) {
+    /* MAIN */
+
+    .main-info {
+        padding-top: 8rem;
+    }
+
+    .main-img {
+        width: 20rem;
+    }
 }
 
 @media (min-width: 1200px) {
+    /* HEADER */
+
     .page-header {
         padding-inline: 10%;
+    }
+
+    /* MAIN */
+
+    .main-info {
+        padding-top: 10rem;
+    }
+
+    .feature p {
+        font-size: 2.5rem;
+    }
+
+    .main-img {
+        width: 30rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    /* MAIN */
+
+    .main-img {
+        width: 40rem;
     }
 }
