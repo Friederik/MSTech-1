@@ -214,11 +214,3 @@
         padding: 10rem;
     }
 }
-
-@media (min-width: 1920px) {
-    /* MAIN */
-
-    .main-img {
-        width: 50rem;
-    }
-}
