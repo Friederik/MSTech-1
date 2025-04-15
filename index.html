@@ -13,9 +13,9 @@
         <header class="page-header">
             <span class="logo-name">FLOWHUB</span>
             <nav class="page-header-nav">
-                <button>HOME</button>
-                <button>FEATURES</button>
-                <button>JOIN US</button>
+                <a class="nav-btn" href="#main">HOME</a>
+                <a class="nav-btn" href="#features">FEATURES</a>
+                <a class="nav-btn" href="#form">JOIN US</a>
             </nav>
         </header>
         <main id="main" class="page-main">
@@ -27,11 +27,11 @@
                     <li class="element feature"><img src="images/point.svg" alt=""><p>Over <span class="main-numbers">58,000</span> hours saved</p></li>
                     <li class="element feature"><img src="images/point.svg" alt=""><p>Users from <span class="main-numbers">25</span> countries</p></li>
                 </ul>
-                <button class="element main-btn">GET STARTED</button>
+                <div class="element main-btn"><a class="main-btn-a" href="#form">GET STARTED</a></div>
             </article>
             <img class="element main-img" src="images/image-1.png" alt="main-1">
         </main>
-        <section class="breaker page-features">
+        <section id="features" class="breaker page-features">
             <img class="back-img" src="images/image-2.png" alt="features-1">
             <article class="details">
                 <ul>
@@ -67,28 +67,32 @@
                         </p>
                     </li>
                 </ul>
-                <button class="details-btn">REQUEST EARLY ACCESS</button>
+                <div class="feat-btn main-btn"><a href="#form" class="main-btn-a">REQUEST EARLY ACCESS</a></div>
             </article>
             <img class="back-img" src="images/image-2.png" alt="features-2">
         </section>
-        <section class="breaker page-form">
+        <section id="form" class="breaker page-form">
             <article class="form-window">
                 <form class="start-form" action="">
                     <h1>Start Right Now</h1>
-                    <input class="input-text" type="text" name="name" placeholder="Name">
-                    <input class="input-text" type="email" name="email" placeholder="Email">
-                    <input id="privacy" type="checkbox">
-                    <label class="privacy-label" for="privacy">I accept Privacy policy</label>
-                    <button>Submit</button>
+                    <div class="start-form-input">
+                        <input class="input-text" type="text" name="name" placeholder="Name">
+                        <input class="input-text" type="email" name="email" placeholder="Email">
+                        <div class="privacy">
+                            <input class="input-privacy" id="privacy" type="checkbox">
+                            <label class="privacy-label" for="privacy">I accept Privacy policy</label>
+                        </div>
+                        <button class="sub-btn">SUBMIT</button>
+                    </div>
                 </form>
-                <img class="" src="images/image-1.png" alt="main-1">
+                <img class="form-img" src="images/image-1.png" alt="main-1">
             </article>
         </section>
         <footer class="breaker">
-            <nav>
-                <button>About</button>
-                <button>Support</button>
-                <button>For Teams</button>
+            <nav class="page-header-nav foot-nav">
+                <a class="nav-btn" href="#main">HOME</a>
+                <a class="nav-btn" href="#features">FEATURES</a>
+                <a class="nav-btn" href="#form">JOIN US</a>
             </nav>
             <div>
                 <article>

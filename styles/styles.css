@@ -46,6 +46,17 @@ button {
     border-bottom: 0.1rem groove #111;
 }
 
+.nav-btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    border: 0;
+    color: #fff;
+    transition: background-color 0.2s ease; 
+    font-style: italic;
+    text-decoration: none;
+}
+
 .logo-name {  
     padding: 0.2rem;
     padding-inline: 1rem;
@@ -53,6 +64,7 @@ button {
 }
 
 .page-header-nav {
+    margin-top: 1rem;
     font-size: clamp(1rem, 4vw, 1.5rem);
     white-space: nowrap;
 }
@@ -64,6 +76,7 @@ button {
 /* MAIN */
 
 .page-main {
+    scroll-margin-top: 5rem;
     background-color: #222;
     position: relative;
     padding-inline: 5%;
@@ -78,7 +91,7 @@ button {
 .main-h1 {
     font-size: 2rem;
     transition: font-size 0.2s ease;
-    max-width: 40rem;
+    max-width: 80rem;
 }
 
 .main-h2 {
@@ -102,12 +115,23 @@ button {
     font-family: "Prata", Arial, Helvetica, sans-serif;
 }
 
+.feat-btn {
+    display: flex;
+    justify-content: center;
+}
+
 .main-btn {
-    background-color: #fff;
-    color: #222;
+    margin-block: 2rem;
+}
+
+.main-btn-a {
+    border-radius: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     padding: 1rem;
+    background-color: #fff;
+    color: #222;
+    text-decoration: none;
     transition: background-color 0.2s ease, font-size 0.2s ease;
 }
 
@@ -121,6 +145,7 @@ button {
 /* FEATURES */
 
 .page-features {
+    scroll-margin-top: 5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -153,32 +178,31 @@ button {
     width: 2rem;
 }
 
-.details-btn {
-    width: 100%;
-    background-color: #fff;
-    color: #222;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 1rem;
-    transition: background-color 0.2s ease, font-size 0.2s ease;
-}
-
 /* FORM */
+
+.page-form {
+    scroll-margin-top: 5rem;
+}
 
 .form-window {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-inline: 5%;
     background-color: #fff;
+    border-radius: 0.5rem;
 }
 
 .start-form {
-    max-width: 50rem;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 0.4rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
+}
+
+.start-form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .form-window h1 {
@@ -190,24 +214,59 @@ button {
     color: #282829;
 }
 
+.input-text {
+    height: 2rem;
+    padding: 0.5rem;
+    border: 2px #444 solid;
+}
+
+.privacy-label {
+    color: #282829;
+}
+
+.sub-btn {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.form-img {
+    display: none;
+    border-radius: 0.5rem;
+}
+
+/* FOOTER */
+
+.foot-nav {
+    border-block: 0.1rem groove #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.foot-nav a {
+    background-color: #282829;
+}
 
 @media (pointer: coarse) {
-    button:active {
+    button:active, a:active {
         background-color: #444;
     }
 
-    .main-btn:active, .details-btn:active {
+    .main-btn-a:active, .details-btn:active {
         background-color: #bbb;
     }
 }
 
 @media (pointer: fine) {
-    button:hover {
+    button:hover, a:active {
       background-color: #333;
       cursor: pointer;
     }
-    .main-btn:hover, .details-btn:hover {
+
+    .main-btn-a:hover, .details-btn:hover {
         background-color: #bbb;
+        cursor: pointer;
     }
 }
 
@@ -223,13 +282,21 @@ button {
         font-size: 1.5rem;
     }
 
+    .main-btn-a {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+
+    /* FEATURES */
+    
     .feature p {
         font-size: 1.5rem;
     }
 
-    .main-btn {
-        font-size: 1.5rem;
-        padding: 2rem;
+    /* FORM */
+
+    .form-window h1 {
+        font-size: 2.5rem;
     }
 }
 
@@ -265,6 +332,23 @@ button {
     .details-btn {
         font-size: 1.5rem;
     }
+
+    /* FORM */ 
+
+    .form-window {
+        justify-content: space-between;
+    }
+
+
+    
+    .form-img {
+        display: block;
+    }
+
+    .form-window h1 {
+        font-size: 3rem;
+    }
+
 }
 
 @media (min-width: 920px) {
@@ -277,6 +361,12 @@ button {
     .main-img {
         width: 20rem;
     }
+
+    /* FORM */ 
+
+    .start-form {
+        padding: 4rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -287,7 +377,11 @@ button {
     }
 
     /* MAIN */
-
+    
+    .main-h1 {
+        font-size: 8rem;
+    }
+    
     .main-info {
         padding-top: 10rem;
     }
@@ -299,12 +393,44 @@ button {
     .main-img {
         width: 30rem;
     }
+
+    /* FORM */ 
+    
+    .form-img {
+        height: 35vw;
+        margin-block: auto;
+    }
+
+    .form-window h1 {
+        font-size: 5rem;
+    }
+
+    .input-text {
+        font-size: 1.5rem;
+    }
+    
+    .privacy-label {
+        font-size: 1.5rem;
+    }
+
+    .sub-btn {
+        font-size: 2.5rem;
+    }
+    
 }
 
 @media (min-width: 1440px) {
     /* MAIN */
 
+
+
     .main-img {
         width: 40rem;
+    }
+
+    /* FORM */
+    
+    .start-form {
+        padding: 10rem;
     }
 }
