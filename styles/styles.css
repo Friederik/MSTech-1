@@ -131,6 +131,7 @@ button {
     height: auto;
     max-height: 650px;
     object-fit: contain;
+    padding-top: 0;
 }
 
 .details {
@@ -144,8 +145,8 @@ button {
     gap: 1rem;
     align-items: start;
     margin-block: 2rem;
-    max-width: 40rem;
     line-height: 1.5rem;
+    max-width: 50rem;
 }
 
 .details ul li img {
@@ -160,6 +161,33 @@ button {
     font-weight: 600;
     padding: 1rem;
     transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+/* FORM */
+
+.form-window {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 5%;
+    background-color: #fff;
+}
+
+.start-form {
+    max-width: 50rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 1rem;
+}
+
+.form-window h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: "Prata", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #282829;
 }
 
 
@@ -226,8 +254,16 @@ button {
 
     /* DETAILS */
 
+    .details ul li {
+        font-size: 1.5rem;
+    }
+
     .back-img {
         display:block;
+    }
+
+    .details-btn {
+        font-size: 1.5rem;
     }
 }
 
