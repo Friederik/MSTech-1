@@ -1,0 +1,35 @@
+/* FEATURES */
+
+.page-features {
+    scroll-margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-img {
+    display: none;
+    width: 20%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    padding-top: 0;
+}
+
+.details {
+    padding-inline: 5%;
+}
+
+.details ul li {
+    word-break: break-word;
+    text-align: justify;
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    margin-block: 2rem;
+    line-height: 1.5rem;
+    max-width: 50rem;
+}
+
+.details ul li img {
+    width: 2rem;
+}

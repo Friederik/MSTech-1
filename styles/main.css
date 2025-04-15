@@ -1,0 +1,67 @@
+/* MAIN */
+
+.page-main {
+    scroll-margin-top: 5rem;
+    background-color: #222;
+    position: relative;
+    padding-inline: 5%;
+    padding-top: 2vh;
+    height: 95vh;
+}
+
+.main-info {
+    padding-top: 2rem;
+}
+
+.main-h1 {
+    font-size: 2rem;
+    transition: font-size 0.2s ease;
+    max-width: 40rem;
+}
+
+.main-h2 {
+    font-size: 1rem;
+    transition: font-size 0.2s ease;
+    max-width: 30rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature p {
+    margin-left: 1rem;
+    transition: font-size 0.2s ease;
+}
+
+.feature span {
+    font-size: 1.5em;
+    font-family: "Prata", Arial, Helvetica, sans-serif;
+}
+
+.feat-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.main-btn {
+    margin-block: 2rem;
+}
+
+.main-btn-a {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    background-color: #fff;
+    color: #222;
+    text-decoration: none;
+    transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+.main-img {
+    width: 15rem;
+    position: absolute;
+    border-radius: 1rem;
+}

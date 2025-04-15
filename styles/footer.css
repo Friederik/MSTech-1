@@ -1,0 +1,48 @@
+/* FOOTER */
+
+.foot-nav {
+    border-block: 0.1rem groove #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.foot-nav a {
+    background-color: #282829;
+}
+
+.post-footer {
+    padding: 5vw;    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10vw;
+}
+
+.foot-top,
+.foot-bottom {
+    display: grid;
+    justify-items: center;
+}
+
+.foot-top {
+    grid-template-rows: repeat(3, 0.5fr);
+}
+
+.foot-bottom {
+    grid-template-rows: repeat(3, 0.2fr);
+}
+
+.foot-block a {
+    cursor: pointer;
+    text-shadow: #fff 1px 0 10px;
+}
+
+.foot-icons {
+    display: flex;
+    gap: 2vw;
+}
+
+.foot-name {
+    padding: 0;
+}
